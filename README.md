@@ -1,8 +1,7 @@
 # EcoVoltify
-# 🏥 MediMart E-Medical Website
+# 🏥 EcoVoltify Website
 
-A simple E-Medical website built using web development technologies like HTML, CSS, PHP, and MySQL. This project enables basic medical-related functionality and form submissions using Formspree.
-
+EcoVoltify website built using web development technologies like HTML, CSS, PHP, and MySQL. 
 ---
 
 ## 🌐 Preview
@@ -17,7 +16,7 @@ _Add a live preview link or screenshot here if available_
 - **CSS**
 - **PHP**
 - **MySQL**
-- **Formspree** – A third-party email delivery service for contact forms
+
 
 ---
 
@@ -51,7 +50,7 @@ Then extract it if needed.
 
 #### 4. Move Project to `htdocs`
 
-Copy the `aldawa` project folder and paste it into the `htdocs` directory of your XAMPP installation.  
+Copy the `Ecovoltify` project folder and paste it into the `htdocs` directory of your XAMPP installation.  
 Example path (Windows): `C:\xampp\htdocs\aldawa`
 
 #### 5. Create a MySQL Database
@@ -59,11 +58,11 @@ Example path (Windows): `C:\xampp\htdocs\aldawa`
 Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
 
 - Click **New**
-- Create a new database with the name: `aldawa`
+- Create a new database with the name: `ecovltify2`
 
 #### 6. Import the SQL File
 
-- Inside phpMyAdmin, select the `aldawa` database
+- Inside phpMyAdmin, select the `ecovoltify2` database
 - Click the **Import** tab
 - Browse and select the `aldawa.sql` file from the `database/` folder of the project
 
@@ -72,10 +71,10 @@ Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
 Open your browser and navigate to:
 
 ```
-http://localhost/aldawa/index.html
+http://localhost/EcoVoltify/homepage.html
 ```
 
-Your MediMart E-Medical Website should now be up and running locally!
+Your Website should now be up and running locally!
 
 ---
 
