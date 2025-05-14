@@ -4,12 +4,6 @@
 EcoVoltify website built using web development technologies like HTML, CSS, PHP, and MySQL. 
 ---
 
-## 🌐 Preview
-
-_Add a live preview link or screenshot here if available_
-
----
-
 ## 🛠️ Built With
 
 - **HTML**
@@ -84,6 +78,3 @@ For any issues or queries, feel free to open an issue or contact me.
 
 ---
 
-## 📄 License
-
-_You can add a license here if your project uses one (e.g., MIT, Apache 2.0)_
