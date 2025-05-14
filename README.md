@@ -44,8 +44,9 @@ Then extract it if needed.
 
 #### 4. Move Project to `htdocs`
 
-Copy the `Ecovoltify` project folder and paste it into the `htdocs` directory of your XAMPP installation.  
-Example path (Windows): `C:\xampp\htdocs\aldawa`
+- Copy the `Ecovoltify` project folder and paste it into the `htdocs` directory of your XAMPP installation.  
+Example path (Windows): `C:\xampp\htdocs\EcoVoltify`
+- Place the images in a folder named images and place that folder inside EcoVoltify folder.
 
 #### 5. Create a MySQL Database
 
@@ -58,7 +59,7 @@ Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
 
 - Inside phpMyAdmin, select the `ecovoltify2` database
 - Click the **Import** tab
-- Browse and select the `aldawa.sql` file from the `database/` folder of the project
+- Browse and select the `ecovoltify2.sql` file from the `database/` folder of the project
 
 #### 7. Launch the Website
 
