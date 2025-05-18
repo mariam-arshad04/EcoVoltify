@@ -23,7 +23,7 @@
                             <a class="nav-link mx-lg-2" href="aboutus.php">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#category">CATEGORIES</a>
+                            <a class="nav-link mx-lg-2" href="homepage.php #category">CATEGORIES</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="#">PRODUCTS</a>
@@ -42,10 +42,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#testimonial">TESTIMONIALS</a>
+                            <a class="nav-link mx-lg-2" href="homepage.php #testimonial">TESTIMONIALS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#contact">CONTACT</a>
+                            <a class="nav-link mx-lg-2" href="homepage.php #contact">CONTACT</a>
                         </li>
                     </ul>
 
