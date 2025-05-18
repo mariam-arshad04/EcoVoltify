@@ -3,7 +3,7 @@
         <div class="container-fluid ms-5">
             <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
             <div class="logo">
-                <a href="homepage.php"><img src="images/ecovoltify_logo.png" alt="logo" class="img-fluid"></a>
+                <a href="adminwelcome.php"><img src="images/ecovoltify_logo.png" alt="logo" class="img-fluid"></a>
             </div>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
