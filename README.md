@@ -71,5 +71,11 @@ http://localhost/EcoVoltify/homepage.php
 
 The Website should now be up and running locally!
 
+#### 8. For stripe payment gateway vendor file:
+Download the file on your project folder through command prompt.
+for exmaple: C:/Xampp/EcoVoltify> Composer require stripe/stripe-php
+
+This will download the vendor folder in the project folder which will help in payment gateway being run properly.
+
 
 
