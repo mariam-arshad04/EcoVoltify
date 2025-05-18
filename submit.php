@@ -1,9 +1,7 @@
 <?php
     session_start();
     include('connection.php');
-    //require('config.php');
-    require('stripe_keys.php');
-
+    // require('config.php');
     // for the filling up of extra field in user table
     
     
@@ -16,7 +14,7 @@
     
         $datetime = date("Y-m-d H:i:s");
     
-        // Update user info in database
+    // Update user info in database
         $updateQuery = "UPDATE user 
                         SET phoneno = '$phoneno', 
                             address = '$address', 
@@ -38,6 +36,9 @@
                 alert('Details saved successfully!');
                 window.location.href = 'submit.php?from=checkout';
             </script>";
+
+            
+
         } else {
             echo "Error: " . mysqli_error($conn);
         }
@@ -82,8 +83,10 @@
         //$total=$_SESSION['finaltotal'];
         $donation = isset($_SESSION['donation']) ? intval($_SESSION['donation']) : 0;
         $total = $_SESSION['finaltotal'] + $donation;
-        // $_SESSION['finaltotal'] = $total; optionally overwrite with the updated total
+        $_SESSION['order_total_with_donation'] = $total;
 
+        //$_SESSION['finaltotal'] = $total; optionally overwrite with the updated total
+        
         
         $status='processing';
         $orderquery="INSERT INTO `orders`(`order_id`, `user_id`, `datetime`, `address`, `postal_code`, `city`, `total`, `status`) 
@@ -200,23 +203,30 @@
                         <h4 style="font-weight: bold;">Payment amount</h4>
                     </div>
                     <div class="col-6">
-                        <h4 style="font-weight: bold; color: #306844">$ <?php echo $_SESSION['finaltotal'] ?></h4>
+                        <h4 style="font-weight: bold; color: #306844">$ <?php echo $_SESSION['order_total_with_donation'] ?></h4>
                     </div>
                 </div>
+
+                <form action="config.php" method="post">
+                        <button>Pay</button>
+                    </form>
+                
                 <?php 
                 // if($run_orderquery && $run_orderdetailquery)
                 // new changesssss
                 if (isset($_SESSION['order_success']) && $_SESSION['order_success']) 
                 {?>
-                    <form action="pay.php" method="POST">
 
-                    <!-- <button type="submit">Pay Now</button> -->
+
                     
+
+
+                    <!-- <form action="pay.php" method="POST">
                         <script 
                             src="https://checkout.stripe.com/checkout.js" 
                             class="stripe-button"
-                            data-key="<?php echo STRIPE_PUBLISHABLE_KEY; ?>"
-                            data-amount="<?php echo ($_SESSION['finaltotal']*100)?>"
+                            data-key="pk_test_51RNbXGRdy99MB75ksZA4FjQexqRtfAoCgrsKVAOZHLPBsnGiEaoBkUREJOL6FuuG1Sjmx4hf30mXYkthVth9P82p00ykAGJJRv"
+                            data-amount="<?php echo ($_SESSION['order_total_with_donation']*100)?>"
                             data-name="<?php echo "payment by". $_SESSION['phoneno']?>"
                             data-description=""
                             data-image=""
@@ -224,52 +234,9 @@
                             >
 
                         </script>
-                        <!-- <button type="submit" class="stripe-button-el" style="visibility: visible;">
-                            <span style="display: block; min-height:30px">Pay With Card</span>
-                        </button> -->
-
-                        <!-- <script src="https://js.stripe.com/v3/"></script>
-                        <form id="payment-form">
-                        <input type="email" id="email" placeholder="Email" required />
-                        <div id="card-element"></div>
-                        <button type="submit">Pay</button>
-                        </form>
-                        <div id="error-message"></div>
-
-                        <script>
-                            const stripe = Stripe('pk_test_...'); // your publishable key
-                            const elements = stripe.elements();
-                            const card = elements.create('card');
-                            card.mount('#card-element');
-
-                            const form = document.getElementById('payment-form');
-                            form.addEventListener('submit', async (e) => {
-                                e.preventDefault();
-
-                                const { token, error } = await stripe.createToken(card);
-                                if (error) {
-                                document.getElementById('error-message').textContent = error.message;
-                                } else {
-                                fetch('pay.php', {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify({
-                                    token: token.id,
-                                    email: document.getElementById('email').value
-                                    })
-                                })
-                                .then(response => response.json())
-                                .then(result => {
-                                    alert(result.message);
-                                });
-                                }
-                            });
-                        </script> -->
-
-                        
-
+                        <button type="submit" class="btn btn-success">Pay $<?php echo $_SESSION['finaltotal']; ?> with Stripe</button>
+                    </form> -->
                     
-                    </form>
 
                     <?php
                     
