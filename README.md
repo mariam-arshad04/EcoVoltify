@@ -1,10 +1,10 @@
 # EcoVoltify
-# 🏥 EcoVoltify Website
+# EcoVoltify Website
 
 EcoVoltify website built using web development technologies like HTML, CSS, PHP, and MySQL. 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - **HTML**
 - **CSS**
@@ -14,15 +14,15 @@ EcoVoltify website built using web development technologies like HTML, CSS, PHP,
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📦 Prerequisites
+### Prerequisites
 
 - Download and install [**XAMPP**](https://www.apachefriends.org/index.html)
 
 ---
 
-### 🔧 Installation Steps
+### Installation Steps
 
 #### 1. Install XAMPP
 
@@ -66,16 +66,10 @@ Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
 Open your browser and navigate to:
 
 ```
-http://localhost/EcoVoltify/homepage.html
+http://localhost/EcoVoltify/homepage.php
 ```
 
-Your Website should now be up and running locally!
+The Website should now be up and running locally!
 
----
 
-## 📫 Contact
-
-For any issues or queries, feel free to open an issue or contact me.
-
----
 
