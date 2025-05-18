@@ -305,7 +305,7 @@
                 <input class="a" for="cpassword" type="password" name="cpassword" placeholder="Confirm Password">
                 <p style="margin-block-start: 0em;">Make sure to enter same password.</p>
                 <input class="a send" name="signup" type="submit" value="Signup" style="color: white;"><br>
-                <p>Already have an account? <a href="login.php">Login</a></p>
+                <p>Already have an account? <a href="user-login.php">Login</a></p>
             </form>
         </div>
             
